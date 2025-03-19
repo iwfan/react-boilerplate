@@ -1,4 +1,5 @@
 import { cva, type VariantProps } from "class-variance-authority";
+import { Link } from "react-router";
 
 import { twMerge } from "tailwind-merge";
 
@@ -53,11 +54,12 @@ export function Button({
   ...props
 }: ButtonProps) {
   return (
-    <a
+    <Link
+      to={props.href}
       className={twMerge(button({ intent, size, className, underline }))}
       {...props}
     >
       {props.children}
-    </a>
+    </Link>
   );
 }

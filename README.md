@@ -6,3 +6,9 @@
 * [Tailwind CSS](https://tailwindcss.com) & [Class Variance Authority](https://cva.style/)
 * [Vite](https://vite.dev) & [Vitest](https://vitest.dev)
 * [ESLint](https://eslint.org) & [Prettier](https://prettier.io)
+
+
+[] Vitest
+[] DotEnv
+[] Https
+[] semantic-release
