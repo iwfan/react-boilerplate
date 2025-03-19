@@ -1,6 +1,6 @@
 # LLM friendly React Boilerplate
 
-A modern React boilerplate focused on providing a non-Server Component development experience. This template uses the latest React 19 and integrates a series of excellent development tools and best practices.
+A modern React boilerplate uses the latest React and integrates a series of excellent development tools and best practices. This project is aim to porvide another option for people who prefer not to use React Server Component.
 
 ## ✨ Features
 
@@ -10,10 +10,7 @@ A modern React boilerplate focused on providing a non-Server Component developme
 - 📝 Full TypeScript support
 - 🧪 Testing with [Vitest](https://vitest.dev)
 - 🎯 Code quality with ESLint and Prettier
-- 📱 Responsive design support
-- 🔄 Hot Module Replacement (HMR)
 - 📊 Bundle analysis
-- 🔒 Type safety
 - 🌐 Internationalization with i18next
 - 🚦 Git hooks and commit lint (coming soon)
 - 📦 Semantic Release (coming soon)

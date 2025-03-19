@@ -1,15 +1,15 @@
-import i18n from 'i18next'
-import { initReactI18next } from 'react-i18next'
-import LanguageDetector from 'i18next-browser-languagedetector'
+import i18n from "i18next";
+import { initReactI18next } from "react-i18next";
+import LanguageDetector from "i18next-browser-languagedetector";
 
-import enUS from './locales/en-US'
-import zhCN from './locales/zh-CN'
+import enUS from "./locales/en-US";
+import zhCN from "./locales/zh-CN";
 
-export const defaultNS = 'common'
+export const defaultNS = "common";
 export const resources = {
-  'en-US': enUS,
-  'zh-CN': zhCN,
-} as const
+  "en-US": enUS,
+  "zh-CN": zhCN,
+} as const;
 
 i18n
   .use(LanguageDetector)
@@ -17,17 +17,19 @@ i18n
   .init({
     resources,
     defaultNS,
-    fallbackLng: 'en-US',
+    fallbackLng: "en-US",
     interpolation: {
       escapeValue: false,
     },
     detection: {
-      order: ['querystring', 'cookie', 'localStorage', 'navigator'],
-      lookupQuerystring: 'lang',
-      lookupCookie: 'i18next',
-      lookupLocalStorage: 'i18nextLng',
-      caches: ['localStorage', 'cookie'],
+      order: ["querystring", "cookie", "localStorage", "navigator"],
+      lookupQuerystring: "lang",
+      lookupCookie: "i18next",
+      lookupLocalStorage: "i18nextLng",
+      caches: ["localStorage", "cookie"],
     },
   })
+  .then(console.log)
+  .catch(console.error);
 
-export default i18n 
+export default i18n;
