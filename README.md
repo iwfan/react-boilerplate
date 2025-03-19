@@ -14,7 +14,7 @@ A modern React boilerplate focused on providing a non-Server Component developme
 - 🔄 Hot Module Replacement (HMR)
 - 📊 Bundle analysis
 - 🔒 Type safety
-- 🌐 Environment configuration
+- 🌐 Internationalization with i18next
 - 🚦 Git hooks and commit lint (coming soon)
 - 📦 Semantic Release (coming soon)
 
@@ -77,6 +77,7 @@ src/
 ├── components/    # Reusable components
 ├── pages/         # Page components
 ├── shared/        # Shared utilities and types
+│   └── i18n/      # Internationalization configuration
 ├── App.tsx        # Root component
 ├── AppRoutes.tsx  # Route configuration
 └── main.tsx       # Application entry point
@@ -92,6 +93,7 @@ src/
 - **Code Quality:** ESLint, Prettier
 - **Type Checking:** TypeScript
 - **Package Manager:** pnpm
+- **Internationalization:** i18next, react-i18next
 
 ## 🔍 Development Guide
 
@@ -102,6 +104,18 @@ The project uses Tailwind CSS for styling, combined with Class Variance Authorit
 ### Routing
 
 Route configuration is located in `src/AppRoutes.tsx`, implemented using React Router.
+
+### Internationalization
+
+The project uses i18next for internationalization. Language files are located in `src/shared/i18n/locales/`. To add a new language:
+
+1. Create a new language folder in `src/shared/i18n/locales/`
+2. Add translation files following the existing structure
+3. Update the language list in `src/components/LanguageSwitcher.tsx`
+
+Currently supported languages:
+- English (en-US)
+- Chinese (zh-CN)
 
 ### Testing
 
@@ -139,3 +153,4 @@ Thanks to all the developers who have contributed to this project!
 - [Vite Documentation](https://vitejs.dev)
 - [Tailwind CSS Documentation](https://tailwindcss.com/docs)
 - [Class Variance Authority Documentation](https://cva.style/docs)
+- [i18next Documentation](https://www.i18next.com)
