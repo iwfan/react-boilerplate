@@ -12,8 +12,7 @@ A modern React boilerplate uses the latest React and integrates a series of exce
 - 🎯 Code quality with ESLint and Prettier
 - 📊 Bundle analysis
 - 🌐 Internationalization with i18next
-- 🚦 Git hooks and commit lint (coming soon)
-- 📦 Semantic Release (coming soon)
+- 🚦 Git hooks and commit lint 
 
 ## 🔧 Prerequisites
 
