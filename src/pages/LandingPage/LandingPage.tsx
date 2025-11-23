@@ -152,8 +152,8 @@ const GlobeAltIcon: React.FC<{ className?: string }> = ({ className }) => (
 const IconPurple: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return React.Children.map(children, (child) => {
     if (React.isValidElement(child)) {
-      return React.cloneElement(child as React.ReactElement<any>, {
-        className: `${child.props.className || ""} text-[#7E22CE]`,
+      return React.cloneElement(child as React.ReactElement<{ className?: string }>, {
+        className: `${(child as React.ReactElement<{ className?: string }>).props.className || ""} text-[#7E22CE]`,
       });
     }
     return child;

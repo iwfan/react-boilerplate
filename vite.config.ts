@@ -6,7 +6,7 @@ import { visualizer } from "rollup-plugin-visualizer";
 import mkcert from "vite-plugin-mkcert";
 
 // https://vite.dev/config/
-export default defineConfig(async ({ mode }) => {
+export default defineConfig(({ mode }) => {
   const isProduction = mode === "production";
   return {
     plugins: [
@@ -19,7 +19,7 @@ export default defineConfig(async ({ mode }) => {
       }),
     ],
     server: {
-      https: true,
+      https: {},
     },
     test: {
       globals: true,
