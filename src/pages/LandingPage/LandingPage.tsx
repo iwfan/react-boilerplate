@@ -1,4 +1,5 @@
 import React, { JSX } from "react";
+import { Header } from "../../components/Header";
 
 // Helper for gradient text
 const GradientText: React.FC<{
@@ -169,7 +170,7 @@ interface CardProps {
 const Card: React.FC<CardProps> = ({ children, className }) => {
   return (
     <div
-      className={`rounded-[20px] bg-white p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),_0_4px_6px_-2px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.07),_0_10px_10px_-5px_rgba(0,0,0,0.07)] ${className || ""}`}
+      className={`rounded-[20px] bg-white dark:bg-gray-800 p-6 shadow-[0_10px_15px_-3px_rgba(0,0,0,0.05),_0_4px_6px_-2px_rgba(0,0,0,0.05)] dark:shadow-[0_10px_15px_-3px_rgba(0,0,0,0.1),_0_4px_6px_-2px_rgba(0,0,0,0.1)] transition-all duration-300 ease-in-out hover:translate-y-[-4px] hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.07),_0_10px_10px_-5px_rgba(0,0,0,0.07)] dark:hover:shadow-[0_20px_25px_-5px_rgba(0,0,0,0.2),_0_10px_10px_-5px_rgba(0,0,0,0.2)] ${className || ""}`}
     >
       {children}
     </div>
@@ -182,7 +183,7 @@ interface TagPillProps {
 
 const TagPill: React.FC<TagPillProps> = ({ children }) => {
   return (
-    <span className="mr-2 mb-2 inline-block rounded-full bg-violet-100 px-3 py-1 text-xs font-medium text-violet-700">
+    <span className="mr-2 mb-2 inline-block rounded-full bg-violet-100 dark:bg-violet-900/30 px-3 py-1 text-xs font-medium text-violet-700 dark:text-violet-300">
       {children}
     </span>
   );
@@ -193,28 +194,29 @@ const App: React.FC = () => {
   const iconPurpleClass = "mr-2 mt-0.5 flex-shrink-0 text-[#7E22CE]"; // Common class for purple icons
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-slate-100 p-4 font-['Inter',_sans-serif] sm:p-6 lg:p-8">
-      <main className="w-full max-w-7xl">
+    <div className="min-h-screen bg-slate-100 dark:bg-gray-900 p-4 font-['Inter',_sans-serif] sm:p-6 lg:p-8">
+      <Header />
+      <main className="w-full max-w-7xl mx-auto pt-20">
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
           {/* Card 1: Main Announcement */}
           <Card className="md:col-span-2 lg:col-span-2">
             <h1 className="mb-3 text-3xl font-extrabold sm:text-4xl lg:text-5xl">
               <GradientText>LLM friendly React Boilerplate</GradientText>
             </h1>
-            <p className="mb-4 text-base text-slate-600 sm:text-lg">
+            <p className="mb-4 text-base text-slate-600 dark:text-slate-300 sm:text-lg">
               一个现代的 React 脚手架，采用最新的 React
               技术栈，并集成了一系列优秀的开发工具和最佳实践。
             </p>
             <div className="space-y-2">
               <div className="flex items-start">
                 <LightBulbIcon className={iconPurpleClass} />
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-slate-500 dark:text-slate-400">
                   专为不倾向使用 React Server Component 的开发者设计。
                 </p>
               </div>
               <div className="flex items-start">
                 <SparklesIcon className={iconPurpleClass} />
-                <p className="text-sm text-slate-500">
+                <p className="text-sm text-slate-500 dark:text-slate-400">
                   开箱即用，快速启动您的下一个项目。
                 </p>
               </div>
@@ -232,7 +234,7 @@ const App: React.FC = () => {
             <p className="text-5xl font-bold">
               <GradientText>100%</GradientText>
             </p>
-            <p className="text-xs text-slate-500">Client-Side Focus</p>
+            <p className="text-xs text-slate-500 dark:text-slate-400">Client-Side Focus</p>
           </Card>
 
           {/* Card 3: Core Tech Stack */}

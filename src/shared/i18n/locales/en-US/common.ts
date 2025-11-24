@@ -25,4 +25,10 @@ export default {
     about: "About",
     contact: "Contact",
   },
+  theme: {
+    light: "Light",
+    dark: "Dark",
+    system: "Auto",
+    toggle: "Toggle theme",
+  },
 } as const;

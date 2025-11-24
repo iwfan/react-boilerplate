@@ -25,4 +25,10 @@ export default {
     about: "关于",
     contact: "联系我们",
   },
+  theme: {
+    light: "浅色",
+    dark: "深色",
+    system: "自动",
+    toggle: "切换主题",
+  },
 } as const;
